@@ -257,7 +257,7 @@ const dbPassword = process.env.DB_PASS
 mongoose.
 connect(`mongodb+srv://${dbUser}:${dbPassword}@cluster0.jx2ku.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`).
 then(()=>{
-  app.listen(3333, ()=> console.log("rodando..."))
+  app.listen(process.env.PORT || 3333, ()=> console.log("rodando..."))
 })
 .catch((err)=> console.log(err))
 
